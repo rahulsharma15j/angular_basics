@@ -1,39 +1,30 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { HttpModule } from "@angular/http";
+import { HttpClientModule } from "@angular/common/http";
+import { StoreModule } from "@ngrx/store";
 
 import { AppRoutingModule } from "./app-routing.module";
 
 import { AppComponent } from "./app.component";
-import { HeaderComponent } from "./header/header.component";
-import { ShoppingListService } from "./shopping-list/shopping-list.service";
-import { RecipeService } from "./recipes/recipe.service";
-import { DataStorageService } from "./shared/data-storage.service";
-import { AuthService } from "./auth/auth.service";
-import { AuthGuard } from "./auth/auth-guard.service";
 import { SharedModule } from "./shared/shared.module";
 import { ShoppingListModule } from "./shopping-list/shopping-list.module";
 import { AuthModule } from "./auth/auth.module";
 import { AuthRoutingModule } from "./auth/auth-routing.module";
-import { HomeComponent } from "./home/home.component";
+import { CoreModule } from "./core/core.module";
+import { shoppingListReducers } from "./shopping-list/store/shopping-list.reducers";
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     ShoppingListModule,
     SharedModule,
     AuthModule,
+    CoreModule,
     AppRoutingModule,
     AuthRoutingModule,
-  ],
-  providers: [
-    ShoppingListService,
-    RecipeService,
-    DataStorageService,
-    AuthService,
-    AuthGuard,
+    StoreModule.forRoot({ shoppingList: shoppingListReducers }),
   ],
   bootstrap: [AppComponent],
 })
