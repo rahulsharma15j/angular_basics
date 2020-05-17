@@ -2,10 +2,6 @@ import * as ShoppingListActions from "./shopping-list.actions";
 import { Ingredient } from "../../shared/ingredient.model";
 import { store } from "@angular/core/src/render3/instructions";
 
-export interface AppState {
-  shoppingList: State;
-}
-
 export interface State {
   ingredients: Ingredient[];
   editedIngredient: Ingredient;
