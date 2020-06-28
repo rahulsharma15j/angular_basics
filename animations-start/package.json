@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/pwa": "^0.901.6",
     "@angular/router": "^6.0.0",
-    "bootstrap": "3.3.7",
+    "bootstrap": "3.4.1",
     "core-js": "^2.5.4",
     "firebase": "^4.6.0",
     "grpc": "^1.24.2",
