@@ -8,16 +8,16 @@ import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLogi
 const config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider('513655063985-qv9sagoi3hchplph561orfsiogcr1p42.apps.googleusercontent.com'),
+    provider: new GoogleLoginProvider(''),
   },
   {
     id: FacebookLoginProvider.PROVIDER_ID,
-    provider: new FacebookLoginProvider('608174566481698'),
+    provider: new FacebookLoginProvider(''),
   }
   ,
   {
     id: LinkedinLoginProvider.PROVIDER_ID,
-    provider: new LinkedinLoginProvider('78ahtddo9h4485v'),
+    provider: new LinkedinLoginProvider(''),
   }
 ], false);
 
